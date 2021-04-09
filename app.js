@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const app = express()
 
-mongoose.connect('mongodb+srv://mohit:Mohit123@cluster0.crwnf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost:27017', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
