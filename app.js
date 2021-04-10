@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 const schema = require('./schema/schema')
 const cors = require('cors')
 
+const PORT = process.env.PORT || '4003'
+
 const app = express()
 
 mongoose.connect('mongodb+srv://mohit:Mohit123@cluster0.crwnf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
@@ -22,6 +24,6 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }))
 
-app.listen('4003', () => {
+app.listen(PORT, () => {
     console.log("Listening on 4003")
 })
